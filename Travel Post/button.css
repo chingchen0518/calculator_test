@@ -1,0 +1,78 @@
+
+
+/* Parg G:button */
+/* Home */
+#home {
+    width:50px;
+    height:50px;
+    position: fixed; 
+    bottom: 20px; 
+    right: 40px; 
+    z-index: 100; 
+    border: none; 
+     /* Rounded corners */
+    border-radius: 50%;
+  }
+
+  #house{
+    width:50px;
+    height:50px;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; 
+    right: 40px; 
+  }
+
+  #home:hover,#house:hover {
+    margin-bottom:5px;
+    cursor:default;
+  }
+  /* Menu */
+  #Menu {
+    width:50px;
+    height:50px;
+    position: fixed; 
+    bottom: 90px; 
+    right: 40px; 
+    z-index: 100; 
+    border: none; 
+    border-radius: 50%; /*make it become circle button*/
+  }
+
+  #menuimg{
+    width:50px;
+    height:50px;
+    position: fixed; /* Fixed/sticky position */    
+    bottom: 90px; 
+    right: 40px; 
+  }
+
+  #Menu:hover,#menuimg:hover {
+    margin-bottom:5px;
+    cursor:default;
+  }
+
+  /*Top*/
+  #Top {
+    display:none;
+    width:50px;
+    height:50px;
+    position: fixed; 
+    bottom: 160px; 
+    right: 40px; 
+    z-index: 100; 
+    border: none; 
+    border-radius: 50%; /*make it become circle button*/
+  }
+
+  #arrow{
+    width:50px;
+    height:50px;
+    position: fixed; /* Fixed/sticky position */    
+    bottom: 160px; 
+    right: 40px; 
+  }
+
+  #Top:hover,#arrow:hover {
+    margin-bottom:5px;
+    cursor:default;
+  }

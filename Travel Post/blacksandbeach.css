@@ -1,0 +1,227 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 10px;
+    /* padding: 10px; */
+    box-sizing: border-box;
+  }
+
+  .whole{
+     padding:10px;
+  }
+  h3
+  {
+    margin-left:2px;
+    color:#065b5c;
+  }
+  .header{
+    background-color: #ffffff;
+    padding: 10px 0;
+    padding-top:0px;
+    margin-left:0px;
+    margin-right:0px;
+    font-family:Poppins ;
+  }
+  .header-container h1 {
+    font-size: 48px;
+    margin: 0 0 10px 0;
+    padding: 0 10px;
+    text-align: left;
+  }
+
+
+
+
+  .subheader {
+    background-color: #065b5c;
+    color:white;
+    font-size: 30px;
+    text-align: left;
+    padding: 15px 10px;
+    margin: 0;
+  }
+  .subheader a {
+    color: white;
+    text-decoration: none;
+  }
+  .journey-text {
+    color: #000000;
+  }
+  .destination-text {
+    color: #005f7f;
+  }
+  .region-header {
+    background-color:#ffffff;
+    color: #0e814d;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  /* Menu Part */
+
+
+  #content_menu{
+    width:100%;
+  }
+  #content_menu>p{
+    font-family:Montserrat;
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:1px;
+  }
+
+  #content_menu>ol{
+    margin-top:0px;
+  }
+
+  #content_menu a,#content_menu li{
+    color:#005f7f;
+    text-decoration:none;
+  }
+
+  #content_menu a:hover{
+    color:#0e814d;
+    text-decoration:underline;
+  }
+
+  .article-section {
+    margin: 10px 0; /* Spacing between sections */
+    font-family:Montserrat;
+  }
+  .article-section h2 {
+    color: #000000;
+    font-size: 30px;
+    margin: 10px 0;
+  }
+  .article-section p {
+    color: #000000;
+    font-size: 20px;
+  }
+
+  /* Part A:NAV BAR  */
+body{
+    margin:0px;
+    margin-top:80px;
+}
+
+#nav_bar{
+    position:fixed;
+    left:0px;
+    width:100%;
+    height:80px;
+    background-color: #94b4ac;
+    z-index: 100;
+    top:0px;
+    display:flex;
+}
+
+#nav_logo{
+    width:35%;
+}
+
+#nav_logo img{
+    height:80px;
+    width:100%;
+}
+
+@media screen and (max-width: 900px){
+  #nav_bar{
+    aspect-ratio: inherit; 
+    /* width:100px; */
+  }
+}
+
+/* #space{
+    width:30%
+} */
+
+#nav_content a{
+  margin-right:20px;
+  font-size:35px;
+  color:white;
+  text-decoration: none;
+  font-family:Montserrat;
+}
+
+#nav_content a:hover{
+    text-decoration:underline;
+    color:#04566E;
+}
+
+#nav_menu{
+    width:70%;
+}
+
+#nav_content{
+    padding-top:20px; 
+    float: right; /*referrence:https://stackoverflow.com/questions/7693224/how-do-i-right-align-div-elements*/
+}
+
+/* Footer */
+@media screen and (max-width: 1150px) {
+    #socialmedia{
+        display:none;
+    }
+}
+
+#Footer{
+    display:flex;
+    height:200px;
+    width:100%;
+    background-color:#96B7AE;
+    /* padding:10px; */
+    
+}
+
+/*Logo */
+#f_logo{
+    width:500px;
+    height:150px;
+    margin-top:25px;
+    margin-left:25px;
+}
+
+#f_logo img{
+    height:150px;
+    width:450px;
+}
+
+
+/*About us */
+#f_aboutus{
+    font-family: Merriweather;
+    font-size: 21px;
+    color:#D8DFE9;
+    margin-top:25px;
+}
+
+#f_aboutus_title{
+    font-family: Merriweather;
+    font-size: 25px;
+    text-decoration: underline;
+    color:#D8DFE9;
+    margin:0px;
+}
+
+/* image(social media) */
+#socialmedia{
+    margin:auto;
+}
+
+#socialmedia img{
+    width:70px;
+    height:70px;
+}
+
+#socialmedia>#row1{
+    margin-bottom:10px;
+}
+
+
+/* Unpdate */
+.article-section p{
+  font-size:30px;
+}
+
+.article-section li,#content_menu li{
+  font-size:30px;
+}

@@ -1,0 +1,349 @@
+
+
+/* Part A:NAV BAR  */
+body{
+    margin:0px;
+    margin-top:80px;
+}
+
+#nav_bar{
+    position:fixed;
+    width:100%;
+    height:80px;
+    background-color: #94b4ac;
+    z-index: 100;
+    top:0px;
+    display:flex;
+}
+
+#nav_logo{
+    width:35%;
+}
+
+#nav_logo img{
+    height:80px;
+    width:100%;
+}
+/* #space{
+    width:30%
+} */
+
+#nav_content a{
+    margin-right:20px;
+    font-size:35px;
+    color:white;
+    text-decoration: none;
+    font-family:Montserrat;
+}
+
+#nav_content a:hover{
+    text-decoration:underline;
+    color:#04566E;
+}
+
+#nav_menu{
+    width:70%;
+}
+
+#nav_content{
+    padding-top:20px; 
+    float: right; /*referrence:https://stackoverflow.com/questions/7693224/how-do-i-right-align-div-elements*/
+}
+
+
+
+/* Part B:Picture  */
+#picture{
+    width:100%;
+    position: relative;
+}
+#homepageimg{
+    width:100%;
+    /* margin-left:auto; */
+    right:0px;
+}
+#homepageimg_slogan{
+    position: absolute;
+    width:70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 使用transform将文本居中 */
+    text-align: center;
+    font-family:Montserrat;
+    font-size:50px;
+    color:white;
+    font-weight:900;
+    border:2px white solid;
+    /* box-shadow: 5px 5px 5px 5px white; */
+    opacity:20;
+    padding:10px;
+    box-shadow:#D8DFE9;
+}
+#homepageimg_slogan:hover{
+    background-color:white;
+    color:black;
+    opacity:.5;
+}
+
+#homepageimg_slogan{
+    text-decoration:none;
+}
+
+#homepageimg_slogan>p{
+    margin:0px;
+}
+
+#cover_explain{
+    color:#D8DFE9;
+    font-size:30px;
+    font-weight:bolder;
+    position: absolute;
+    left:1%;
+    bottom:1%;
+    opacity:10;
+    text-decoration: none;
+}
+/* Part C:About us */
+#h_aboutus{
+    width:80%;
+    /* height:500px;  */
+    border:3px solid black;
+    border-radius:10px; 
+    /* display:flex; */
+    margin-top:50px;
+    margin-bottom:50px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:30px;
+}
+
+.title{
+    display:flex;
+    font-size: 80px;
+    margin-bottom:15px;
+}
+
+#txt1>span,#txt2>span{
+    font-size:30px;
+    font-family:Montserrat;
+}
+
+/* Pard D:Recent Post */
+#recentpost{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.recent_post_title>p{
+    margin:0px;
+    font-size:80px;
+    text-align:center;
+    /* margin-right:auto; */
+}
+
+/*Blog Part */
+@media screen and (max-width: 2000px) {
+    #Blog{
+        display:flex;
+        flex-wrap: wrap;
+        width:100%;
+        max-width:1110px;
+        margin-right:auto;
+        margin-left:auto;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #Blog{
+        display:flex;
+        flex-wrap: wrap; 
+        width:100%;
+        max-width:740px;
+        margin-right:auto;
+        margin-left:auto; 
+    }
+}
+
+.content_title{
+    text-align:center;
+    font-size:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.Blog_content{
+    width:350px;
+    height:450px;
+    margin:10px;
+    margin-top:0px;
+    margin-left:10px;
+    margin-bottom:50px;
+    border-radius:10px;
+    box-shadow: 0 0 0.1em rgb(26, 58, 185);/*make referrence from https://developer.mozilla.org/zh-TW/docs/Web/CSS/box-shadow*/
+    font-size:30px;
+    
+    /* border-collapse: collapse; */
+}
+.content_title{    
+    color:#04566E;
+    margin-left:auto;
+    margin-right:auto;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.Blog_content>a{
+    text-decoration:none;
+}
+
+.Blog_content p:hover{    
+    color:#689368;
+    text-decoration:underline;
+}
+
+.contentimg{
+    width:300px;
+    height:200px;
+    margin-left:25px;
+    margin-right:25px;
+    border-radius:10px;
+}
+
+/* Footer */
+@media screen and (max-width: 1150px) {
+    #socialmedia{
+        display:none;
+    }
+}
+
+#Footer{
+    display:flex;
+    height:200px;
+    width:100%;
+    background-color:#96B7AE;
+    /* padding:10px; */
+    
+}
+
+/*Logo */
+#f_logo{
+    width:500px;
+    height:150px;
+    margin-top:25px;
+    margin-left:25px;
+}
+
+#f_logo img{
+    height:150px;
+    width:450px;
+}
+
+
+/*About us */
+#f_aboutus{
+    font-family: Merriweather;
+    font-size: 21px;
+    color:#D8DFE9;
+    margin-top:25px;
+}
+
+#f_aboutus_title{
+    font-family: Merriweather;
+    font-size: 25px;
+    text-decoration: underline;
+    color:#D8DFE9;
+    margin:0px;
+}
+
+/* image(social media) */
+#socialmedia{
+    margin:auto;
+}
+
+#socialmedia img{
+    width:70px;
+    height:70px;
+}
+
+#socialmedia>#row1{
+    margin-bottom:10px;
+}
+
+
+/* Color Changing and font family changing*/
+.Pastel{
+    color:#689368;
+    margin:0px;
+    font-family:Poppins;
+} 
+.Lagoon{
+    color:#04566E;
+    margin:0px;
+    font-family:Poppins;
+}
+
+.Black{
+    margin:0px;
+    font-family:Poppins;
+}
+
+p,li{
+    font-family:Montserrat;
+}
+
+.Rating>span{
+    color:rgb(223, 223, 3);
+}
+
+/* Parg G:button */
+/* Home */
+#home {
+    width:50px;
+    height:50px;
+    position: fixed; 
+    bottom: 20px; 
+    right: 40px; 
+    z-index: 100; 
+    border: none; 
+     /* Rounded corners */
+    border-radius: 50%;
+  }
+
+  #house{
+    width:50px;
+    height:50px;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; 
+    right: 40px; 
+  }
+
+  #home:hover,#house:hover {
+    margin-bottom:5px;
+    cursor:default;
+  }
+  /*Top*/
+  #Top {
+    display:none;
+    width:50px;
+    height:50px;
+    position: fixed; 
+    bottom: 90px; 
+    right: 40px; 
+    z-index: 100; 
+    border: none; 
+    border-radius: 50%; /*make it become circle button*/
+  }
+
+  #arrow{
+    width:50px;
+    height:50px;
+    position: fixed; /* Fixed/sticky position */    
+    bottom: 90px; 
+    right: 40px; 
+  }
+
+  #Top:hover,#arrow:hover {
+    margin-bottom:5px;
+    cursor:default;
+  }
