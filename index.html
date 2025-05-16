@@ -2,20 +2,118 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>Webdriver 檢測跳轉</title>
-  <script>
-    window.onload = function () {
-      if (navigator.webdriver) {
-        // 偵測到是自動化工具（例如 Selenium）
-        window.location.href = "https://example.com/bot-detected";
-      } else {
-        // 沒有偵測到自動化工具
-        window.location.href = "https://www.google.com/";
-      }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>書籍列表</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <style>
+    /* 背景遮罩 */
+    #popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
     }
-  </script>
+
+    /* 廣告內容 */
+    #popup-ad {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+  </style>
 </head>
 <body>
-  <p>檢測中，請稍候...</p>
+  <!-- 彈出式廣告 -->
+  <div id="popup-overlay">
+    <div id="popup-ad">
+      <h3>限時優惠！</h3>
+      <p>立即前往我們的特價頁面，享受 50% 折扣！</p>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h1 id="main-title" class="text-center mb-4">書籍列表</h1>
+
+    <!-- 新增的 Radio 按鈕 -->
+    <div class="mb-4 text-center">
+    </div>
+
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>書名</th>
+          <th>價格</th>
+          <th>介紹</th>
+        </tr>
+      </thead>
+      <tbody id="book-table-body">
+        <!-- 書籍資料將由 JavaScript 動態生成 -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // 動態生成 Radio 按鈕並載入 JSON 資料
+    window.onload = function () {
+      const container = document.querySelector('.mb-4.text-center');
+      const categories = ['military', 'love', 'mystery'];
+
+      // 動態生成 Radio 按鈕
+      categories.forEach(category => {
+        const label = document.createElement('label');
+        label.innerHTML = `
+          <input type="radio" name="category" value="${category}"> ${category}
+        `;
+        container.appendChild(label);
+
+        // 綁定點擊事件到 Radio 按鈕
+        const radio = label.querySelector('input[type="radio"]');
+        radio.addEventListener('click', () => {
+          updateTable(category); // 點擊後更新表格
+        });
+      });
+
+      // 載入 JSON 資料
+      fetch('book.json')
+        .then(response => response.json())
+        .then(data => {
+          window.books = data; // 將書籍資料存入全域變數
+        })
+        .catch(error => console.error('無法載入書籍資料:', error));
+    };
+
+    // 更新表格內容
+    function updateTable(category) {
+      const tableBody = document.getElementById('book-table-body');
+      tableBody.innerHTML = ''; // 清空表格內容
+
+      // 篩選對應分類的書籍
+      const filteredBooks = window.books.filter(book => book.category === category);
+
+      // 動態生成表格內容
+      filteredBooks.forEach(book => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${book.title}</td>
+          <td>${book.price}</td>
+          <td>${book.description}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+  </script>
 </body>
 </html>
+
+
